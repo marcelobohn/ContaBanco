@@ -3,18 +3,18 @@ package br.com.java.aula;
 public class Conta {	
 	private String agencia;
 	private String conta;
-	private String titular;
+	private Correntista titular;
 	private double saldo;
 	
 	public Conta(String titular, String agencia, String conta) {
-		this.titular = titular;
+		this.titular = new Correntista(titular, "");
 		this.agencia = agencia;
 		this.conta = conta;
 		this.saldo = 0;
 	}
 	
 	public String GetTitular() {
-		return this.titular;
+		return this.titular.GetNome();
 	}
 	
 	public double GetSaldo() {
