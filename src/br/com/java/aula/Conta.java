@@ -24,4 +24,8 @@ public class Conta {
 	public double Credito(double valor) {
 		return this.saldo += valor;
 	}
+	
+	public double Debito(double valor) {
+		return this.saldo -= valor;
+	}	
 }

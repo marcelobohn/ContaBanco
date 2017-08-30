@@ -28,4 +28,10 @@ public class TesteConta {
 		assertEquals(100, conta.GetSaldo(), 0);
 	}
 
+	@Test
+	public void DebitoConta() {
+		conta.Credito(100);
+		conta.Debito(60);
+		assertEquals(40, conta.GetSaldo(), 0);
+	}		
 }
