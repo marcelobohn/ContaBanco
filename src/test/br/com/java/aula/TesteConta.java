@@ -17,9 +17,15 @@ public class TesteConta {
 	}
 
 	@Test
-	public void test() {
-		assertEquals(conta.GetTitular(), "Marcelo");
-		assertEquals(conta.GetSaldo(), 0, 0);
+	public void DadosConta() {
+		assertEquals("Marcelo", conta.GetTitular());
+		assertEquals(0, conta.GetSaldo(), 0);
+	}
+	
+	@Test
+	public void CreditoConta() {
+		conta.Credito(100);
+		assertEquals(100, conta.GetSaldo(), 0);
 	}
 
 }
