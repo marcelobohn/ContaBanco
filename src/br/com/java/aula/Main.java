@@ -10,16 +10,13 @@ public class Main {
 		System.out.print("Digite o nome: ");
 		Scanner s = new Scanner(System.in);
 		String nome = s.next();
-		String agencia = "";
-		String numero = "";
-		System.out.println("o nome é " + nome);
+		String agencia = "123-4";
+		String numero = "99999-9";
 		
 		Conta conta = new Conta(nome, agencia, numero);
-		//implementar
-		//conta.ImprimeDados();
+		conta.Credito(1000);
+		conta.ImprimeDados();
 		
-		//level up
-		//array de contas
 	}
 
 }

@@ -28,4 +28,12 @@ public class Conta {
 	public double Debito(double valor) {
 		return this.saldo -= valor;
 	}	
+	
+	public void ImprimeDados() {
+		System.out.println("Dados da conta");
+		System.out.println("Nome: " + this.titular.GetNome());
+		System.out.println("Agência: " + this.agencia);
+		System.out.println("Conta: " + this.conta);
+		System.out.println("Saldo: " + this.saldo);		
+	}
 }
