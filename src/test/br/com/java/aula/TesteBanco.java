@@ -27,5 +27,10 @@ public class TesteBanco {
 		assertEquals("Fulano da Silva", conta.GetTitular());		
 	}
 	
-
+	@Test
+	public void VerificaUltimaContaAbertaDeBancoSemContas() {
+		Banco banco = new Banco("Banco Teste");
+		Conta conta = banco.GetUltimaContaAberta();
+		assertNull(conta);
+	}	
 }

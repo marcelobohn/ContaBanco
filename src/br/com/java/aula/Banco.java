@@ -51,7 +51,10 @@ public class Banco {
 	}
 	
 	public Conta GetUltimaContaAberta() {
-		return this.contas.get(this.contas.size()-1);
+		if (this.contas.size() > 0)
+			return this.contas.get(this.contas.size()-1);
+		else
+			return null;
 	}
 
 }
