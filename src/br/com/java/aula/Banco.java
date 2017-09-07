@@ -16,6 +16,10 @@ public class Banco {
 		return this.nome;
 	}
 	
+	public Conta AbreConta() {
+		return this.AbreConta("", "", "");
+	}
+	
 	public Conta AbreConta(String nome, String agencia, String numero) {
 		System.out.println("Abertura de conta");								
 		
