@@ -1,5 +1,7 @@
 package br.com.java.aula;
 
+import java.util.Scanner;
+
 public class Conta {	
 	private String agencia;
 	private String conta;
@@ -36,4 +38,5 @@ public class Conta {
 		System.out.println("Conta: " + this.conta);
 		System.out.println("Saldo: " + this.saldo);		
 	}
+	
 }

@@ -12,21 +12,32 @@ public class Banco {
 		this.nome = nome;
 	}
 	
-	public void AbreConta() {
-		Scanner s = new Scanner(System.in);
+	public String GetNome() {
+		return this.nome;
+	}
+	
+	public Conta AbreConta(String nome, String agencia, String numero) {
+		System.out.println("Abertura de conta");								
 		
-		System.out.println("Abertura de conta");						
+		if (nome.equals("")) {
+			System.out.print("Digite o nome do titular: ");
+			nome = Util.LeConsole();
+		}
 		
-		System.out.print("Digite o nome: ");
-		String nome = s.next();
+		if (agencia.equals("")) {
+			System.out.print("Digite o número da agência: ");
+			agencia = Util.LeConsole();
+		}
+				
+		if (numero.equals("")) {
+			System.out.print("Digite o número da conta: ");
+			numero = Util.LeConsole();
+		}
 		
-		System.out.print("Digite a agência: ");
-		String agencia = s.next();
+		Conta conta = new Conta(nome, agencia, numero);
+		this.contas.add(conta);
 		
-		System.out.print("Digite o número da conta: ");
-		String numero = s.next();
-		
-		this.contas.add(new Conta(nome, agencia, numero));		
+		return conta;
 	}
 	
 	public void ImprimeContas() {
